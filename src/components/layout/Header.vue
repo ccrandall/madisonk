@@ -6,8 +6,8 @@
                 <div class="row-menu row-offcanvas">
                     <div class="row-menu-inner row-brand menu-horizontal-inner">
                         <div class="nav navbar-nav navbar-nav-first">
-                            <ul class="menu-smart sm menu-icons menu-smart-social" v-bind:key="link.id" v-for="link in socialLinks">
-                                <li class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
+                            <ul class="menu-smart sm menu-icons menu-smart-social">
+                                <li v-bind:key="link.id" v-for="link in socialLinks" class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
                             </ul>
                         </div>
                         <div id="logo-container-mobile" class="col-lg-0 logo-container middle">
