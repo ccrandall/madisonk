@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header v-bind:socialLinks="socialLinks"></Header>
+    <Footer v-bind:socialLinks="socialLinks"></Footer>
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Footer
   },
   data: function() {
     return {
