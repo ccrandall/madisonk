@@ -23,7 +23,6 @@ export default {
 <style scoped>
 footer {
     width: 100%;
-    height: 1px;
     color: #fff;
 }
 .main-container .row-container {

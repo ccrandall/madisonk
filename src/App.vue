@@ -43,8 +43,25 @@ export default {
 </script>
 
 <style>
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+}
+div#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header + div {
+    flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
 }
 </style>
