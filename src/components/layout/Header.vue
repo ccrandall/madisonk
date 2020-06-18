@@ -4,7 +4,7 @@
         <div id="masthead" class="navbar menu-primary">
             <div class="menu-container">
                 <div class="mmb-container">
-                    <div class="mobile-menu-button menu-button-overlay">
+                    <div class="mobile-menu-button menu-button-overlay" @click="toggleMenu" v-bind:class="{close: isClosed}">
                         <span class="lines"></span>
                     </div>
                 </div>
@@ -28,7 +28,17 @@
 <script>
 export default {
     name: "Header",
-    props: ["socialLinks"]
+    props: ["socialLinks"],
+    data: function() {
+        return {
+            isClosed: false
+        }
+    },
+    methods: {
+        toggleMenu: function() {
+            this.isClosed = !this.isClosed;
+        }
+    }
 }
 </script>
 
@@ -83,7 +93,7 @@ div#logo-container-mobile {
 .mobile-menu-button {
     display: block;
 }
-.lines-button {
+.mobile-menu-button {
     transition: .3s;
 }
 .mobile-menu-button {
@@ -125,10 +135,55 @@ div#logo-container-mobile {
     transform-origin: 50% 50%;
     transition: top 0.3s 0.6s ease-in-out,transform 0.3s ease-in-out;
 }
+.mobile-menu-button.close .lines:before {
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+.mobile-menu-button.close .lines:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+.mobile-menu-button.close .lines:before, .mobile-menu-button.close .lines:after {
+    transition: top 0.3s ease-in-out,transform 0.3s 0.5s ease-in-out;
+    top: 0;
+    width: 20px;
+}
+.mobile-menu-button.close .lines, .mobile-menu-button.closing .lines {
+    transition: background 0.3s 0s ease-in-out;
+    background: transparent !important;
+}
+.overlay.style-light-bg {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.style-light-bg {
+    background-color: #ffffff;
+}
 
 @media (min-width: 960px) {
     .menu-container {
         padding: 0px 36px 0px 36px;
+    }
+    .overlay.open {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+    .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s 0.5s, visibility 0s 1s;
+    }
+    .vmenu-center .menu-container .row-inner * {
+        text-align: center;
+    }
+    .menu-overlay .vmenu-container .menu-sidebar-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 90px 0px 90px 0px !important;
     }
 }
 
