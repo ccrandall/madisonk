@@ -82,6 +82,10 @@ div#logo-container-mobile {
     height: 100%;
 }
 
+.navbar-brand {
+    margin: 0;
+}
+
 .navbar-brand img {
     width: 220px;
     height: auto;
