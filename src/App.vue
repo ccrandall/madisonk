@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header v-bind:socialLinks="socialLinks"></Header>
-
+    <b-container>
+      <router-view></router-view>
+    </b-container>
     <Footer v-bind:socialLinks="socialLinks"></Footer>
   </div>
 </template>
@@ -65,5 +67,11 @@ header + div {
 }
 footer {
   flex-shrink: 0;
+}
+#nav {
+  text-align: center;
+}
+a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
