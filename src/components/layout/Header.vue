@@ -4,9 +4,9 @@
         <div id="masthead" class="navbar menu-primary">
             <div class="menu-container">
                 <div class="mmb-container">
-                    <div class="mobile-menu-button menu-button-overlay" @click="toggleMenu" v-bind:class="{close: isClosed}">
+                     <b-button variant="light" v-b-toggle.sidebar-no-header class="mobile-menu-button menu-button-overlay">
                         <span class="lines"></span>
-                    </div>
+                    </b-button>
                 </div>
                 <div id="logo-container-mobile" class="logo-container">
                     <div id="main-logo" class="navbar-header style-light">
@@ -21,6 +21,22 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div>
+            <b-sidebar id="sidebar-no-header" aria-labelledby="sidebar-no-header-title" no-header shadow>
+            <template v-slot:default="{ hide }">
+                <div class="p-3">
+                <b-button pill variant="outline-secondary" @click="hide" class="float-right"><font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon></b-button>
+                <nav class="mb-3">
+                    <b-nav vertical>
+                    <b-nav-item active @click="hide">Home</b-nav-item>
+                    <b-nav-item href="#link-1" @click="hide">About</b-nav-item>
+                    <b-nav-item href="#link-2" @click="hide">Contact</b-nav-item>
+                    </b-nav>
+                </nav>
+                </div>
+            </template>
+            </b-sidebar>
         </div>
     </header>
 </template>
@@ -51,12 +67,10 @@ div#masthead {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
-.menu-container > div {
-    width: 33%;
-    display: flex;
-}
+.menu-container > div {}
 
 div#logo-container-mobile {
     justify-content: center;
@@ -69,7 +83,7 @@ div#logo-container-mobile {
 }
 
 .navbar-brand img {
-    width: 120px;
+    width: 220px;
     height: auto;
 }
 
@@ -98,12 +112,15 @@ div#logo-container-mobile {
 }
 .mobile-menu-button {
     line-height: 0px;
-    /* transform: translateY(-50%); */
     position: relative;
-    padding: 20px 36px 27px 36px;
+    padding: 12px 12px 14px 12px;
     cursor: pointer;
 }
-
+.btn-light.mobile-menu-button {
+    color: #000;
+    background-color: transparent;
+    border-color: #000;
+}
 .lines {
     position: relative;
 }
@@ -155,6 +172,15 @@ div#logo-container-mobile {
 }
 .style-light-bg {
     background-color: #ffffff;
+}
+
+.b-sidebar-body nav {
+    margin-top: 40px;
+}
+
+.b-sidebar-body nav .nav-link {
+    color: #000;
+    padding: 1rem;
 }
 
 @media (min-width: 960px) {
