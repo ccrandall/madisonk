@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header v-bind:socialLinks="socialLinks"></Header>
-    <PhotoGrid></PhotoGrid>
+
     <Footer v-bind:socialLinks="socialLinks"></Footer>
   </div>
 </template>
@@ -9,14 +9,12 @@
 <script>
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import PhotoGrid from './components/PhotoGrid';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer,
-    PhotoGrid
+    Footer
   },
   data: function() {
     return {
@@ -60,6 +58,7 @@ div#app {
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 10px solid #000;
 }
 header + div {
     flex: 1 0 auto;
