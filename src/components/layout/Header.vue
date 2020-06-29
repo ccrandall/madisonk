@@ -29,9 +29,12 @@
                 <b-button pill variant="outline-secondary" @click="hide" class="float-right"><font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon></b-button>
                 <nav class="mb-3">
                     <b-nav vertical>
-                    <b-nav-item active @click="hide">Home</b-nav-item>
-                    <b-nav-item href="#link-1" @click="hide">About</b-nav-item>
-                    <b-nav-item href="#link-2" @click="hide">Contact</b-nav-item>
+                    <!-- <b-nav-item @click="hide"><router-link to="/">Home</router-link></b-nav-item> -->
+                    <!-- <b-nav-item @click="hide"><router-link to="/about">About</router-link></b-nav-item> -->
+                    <!-- <b-nav-item @click="hide"><router-link to="/contact">Contact</router-link></b-nav-item> -->
+                    <router-link to="/">Home</router-link>
+                    <router-link to="/about">About</router-link>
+                    <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>
                 </div>
@@ -180,9 +183,13 @@ div#logo-container-mobile {
 
 .b-sidebar-body nav {
     margin-top: 40px;
+    font-family: 'Playfair Display';
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: .15em;
 }
 
-.b-sidebar-body nav .nav-link {
+.b-sidebar-body nav a {
     color: #000;
     padding: 1rem;
 }
