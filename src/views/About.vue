@@ -1,9 +1,21 @@
 <template>
   <div class="about">
-    <h1 class="text-center mt-4 mb-4">This is an about page</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet iusto, earum quis suscipit molestiae quibusdam quae excepturi. Omnis repellat eligendi similique quae quibusdam autem debitis eveniet! Porro beatae nulla laudantium.</p>
+    <b-container>
+      <b-row class="mb-5">
+        <b-col cols="3" class="p-5">
+          <h3>BIOGRAPHY</h3>
+        </b-col>
+        <b-col cols="9" class="p-5">
+          <h3>Madison Kaminsky</h3>
+        </b-col>
+      </b-row>
+      <b-row class="justify-content-center">
+        <b-col cols="9">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam repudiandae repellat tempora. Ullam nemo laudantium ex, tenetur labore assumenda vitae autem culpa excepturi possimus illo reprehenderit cum unde officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam repudiandae repellat tempora. Ullam nemo laudantium ex, tenetur labore assumenda vitae autem culpa excepturi possimus illo reprehenderit cum unde officiis</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam repudiandae repellat tempora. Ullam nemo laudantium ex, tenetur labore assumenda vitae autem culpa excepturi possimus illo reprehenderit cum unde officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam repudiandae repellat tempora. Ullam nemo laudantium ex, tenetur labore assumenda vitae autem culpa excepturi possimus illo reprehenderit cum unde officiis</p>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 

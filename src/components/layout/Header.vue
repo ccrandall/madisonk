@@ -29,9 +29,6 @@
                 <b-button pill variant="outline-secondary" @click="hide" class="float-right"><font-awesome-icon :icon="['fas', 'times']"></font-awesome-icon></b-button>
                 <nav class="mb-3">
                     <b-nav vertical>
-                    <!-- <b-nav-item @click="hide"><router-link to="/">Home</router-link></b-nav-item> -->
-                    <!-- <b-nav-item @click="hide"><router-link to="/about">About</router-link></b-nav-item> -->
-                    <!-- <b-nav-item @click="hide"><router-link to="/contact">Contact</router-link></b-nav-item> -->
                     <router-link to="/">Home</router-link>
                     <router-link to="/about">About</router-link>
                     <router-link to="/contact">Contact</router-link>
@@ -113,6 +110,7 @@ div#logo-container-mobile {
 
 .mobile-menu-button {
     display: block;
+    border: none;
 }
 .mobile-menu-button {
     transition: .3s;

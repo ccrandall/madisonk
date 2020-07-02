@@ -1,19 +1,28 @@
 <template>
   <div id="photo-grid">
-    <div v-for="(image, index) in images" :style="styles" v-bind:key="index" :box-height="'300px'" :box-width="'20%'" :excess-text="'+ {{count}}'" v-on:clickExcess="triggerClick">
-      <img v-bind:src="image.url" />
-    </div>
+      <b-container fluid>
+          <b-row no-gutters>
+            <b-col v-for="(image, index) in images" :style="styles" v-bind:key="index" v-on:clickExcess="triggerClick">
+                <div class="overlay-wrap">
+                    <div class="overlay-inner">
+                        <div class="overlay-content">
+                            <div class="overlay-text double-block-padding">
+                                <div class="t-entry">
+                                    <h2 class="t-entry-title font-202503 h2 font-weight-700 fontspace-111509">{{image.text}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background-cover" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
+            </b-col>
+          </b-row>
+      </b-container>
   </div>
 </template>
 
 <script>
 export default {
-    props: {
-        boxWidth: { type: String, default: '25%' },
-        boxHeight: { type: String, default: '200px' },
-        boxBorder: { type: Number, default: 0 },
-        excessText: { type: String, default: 'View more {{count}} images'}
-    },
     data: function() {
         return {
             styles: {
@@ -24,23 +33,28 @@ export default {
             },
             images: [
                 {
-                    title: 'image 1',
-                    url: 'https://placehold.it/400'
-                }, {
-                    title: 'image 2',
-                    url: 'https://placehold.it/400'
-                }, {
-                    title: 'image 3',
-                    url: 'https://placehold.it/400'
-                }, {
-                    title: 'image 4',
-                    url: 'https://placehold.it/400'
-                }, {
-                    title: 'image 5',
-                    url: 'https://placehold.it/400'
-                }, {
-                    title: 'image 6',
-                    url: 'https://placehold.it/400'
+                    id: 1,
+                    img_name: '/images/unsplash.jpg',
+                    text: 'Link Text',
+                    link: '#'
+                },
+                {
+                    id: 2,
+                    img_name: '/images/unsplash2.jpg',
+                    text: 'Link Text',
+                    link: '#'
+                },
+                {
+                    id: 3,
+                    img_name: '/images/unsplash3.jpg',
+                    text: 'Link Text',
+                    link: '#'
+                },
+                {
+                    id: 4,
+                    img_name: '/images/unsplash4.jpg',
+                    text: 'Link Text',
+                    link: '#'
                 }
             ]
         }
@@ -54,18 +68,83 @@ export default {
 </script>
 
 <style scoped>
-#photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-#photo-grid div {
-    padding: 15px 30px;
-}
-
-#photo-grid div img {
+#photo-grid img {
     width: 100%;
+    height: 100%;
+}
+
+#photo-grid .col {
+    min-height: 400px;
+}
+
+#photo-grid .col:hover .overlay-wrap {
+    background: rgba(255,255,255,.65);
+}
+
+#photo-grid .col:hover .overlay-text {
+    transform: translate(0px, 0%);
+    transition-delay: 250ms;
+    opacity: 1;
+}
+
+#photo-grid .col:hover .background-cover {
+    transform: scale(1.05, 1.05);
+}
+
+.overlay-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.overlay-inner {
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-content {
+    text-align: center;
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+.overlay-text {
+    width: 75%;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    transition: opacity 0.2s ease-in-out,transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: scale(0.9);
+}
+.double-block-padding {
+    padding: 72px;
+}
+
+.t-entry {
+    width: 100%;
+}
+
+.background-cover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: scale(1, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition-property: transform,filter, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
 }
 
 </style>
