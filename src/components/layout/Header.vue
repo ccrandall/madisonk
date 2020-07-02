@@ -192,33 +192,9 @@ div#logo-container-mobile {
     padding: 1rem;
 }
 
-@media (min-width: 960px) {
-    .menu-container {
-        padding: 0px 36px 0px 36px;
-    }
-    .overlay.open {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s;
-    }
-    .overlay {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10000;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s 0.5s, visibility 0s 1s;
-    }
-    .vmenu-center .menu-container .row-inner * {
-        text-align: center;
-    }
-    .menu-overlay .vmenu-container .menu-sidebar-inner {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 90px 0px 90px 0px !important;
+@media (max-width: 767px) {
+    .navbar-brand img {
+        display: none;
     }
 }
 

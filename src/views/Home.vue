@@ -121,4 +121,9 @@ export default {
     -o-animation: fadeIn ease 5s;
     -ms-animation: fadeIn ease 5s;
 }
-    </style>
+@media (max-width: 768px) {
+  .animated {
+    display: none;
+  }
+}
+</style>

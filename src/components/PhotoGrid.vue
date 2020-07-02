@@ -1,7 +1,7 @@
 <template>
   <div id="photo-grid">
       <b-container fluid>
-          <b-row no-gutters>
+          <b-row no-gutters cols-sm="2" cols="1" cols-md="4" cols-lg="4">
             <b-col v-for="(image, index) in images" :style="styles" v-bind:key="index" v-on:clickExcess="triggerClick">
                 <div class="overlay-wrap">
                     <div class="overlay-inner">

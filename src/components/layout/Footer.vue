@@ -1,15 +1,19 @@
 <template>
 <footer id="colophon" class="site-footer">
-    <div class="row-container style-dark-bg footer-last">
-        <div class="row row-parent style-dark no-top-padding no-h-padding no-bottom-padding">
-            <div class="site-info uncell col-lg-6 pos-middle text-left">&copy; 2020  All rights reserved</div>
-            <div class="uncell col-lg-6 pos-middle text-right">
-                <div class="social-icon icon-box icon-box-top icon-inline" v-bind:key="link.id" v-for="link in socialLinks">
-                    <a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a>
+    <b-container fluid>
+        <b-row cols="2">
+            <b-col>
+                <div class="site-info">&copy; 2020  All rights reserved</div>
+            </b-col>
+            <b-col>
+                <div class="text-right">
+                    <div class="social-icon icon-box icon-box-top icon-inline" v-bind:key="link.id" v-for="link in socialLinks">
+                        <a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </b-col>
+        </b-row>
+    </b-container>
 </footer>
 </template>
 
@@ -24,40 +28,15 @@ export default {
 footer {
     width: 100%;
     color: #fff;
+    background-color: #141618;
+    padding: 20px 0;
 }
 .main-container .row-container {
     position: relative;
     clear: both;
     border: 0;
 }
-footer .footer-last {
-    font-size: 13px;
-}
-.style-dark-bg {
-    background-color: #141618;
-}
-.row .uncell {
-    display: table-cell;
-    position: relative;
-    height: 100%;
-    vertical-align: inherit;
-    border: 0;
-}
-.uncell, .uncont {
-    transition-property: box-shadow;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
-}
-footer .footer-last .uncell {
-    padding-top: 27px;
-    padding-bottom: 27px;
-}
 
-footer .row {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
 .text-right {
     text-align: right;
 }
@@ -65,19 +44,19 @@ footer .row {
 div > .icon-box:first-child {
     padding-left: 0px !important;
 }
-footer .footer-last .icon-box.icon-inline a {
+footer .icon-box.icon-inline a {
     color: #FFF;
     padding: 10px;
     font-size: 1.3em;
 }
 
-footer .footer-last .icon-box.icon-inline a:hover {
+footer .icon-box.icon-inline a:hover {
     background: #FFF;
     border-radius: 50%;
     color: #000;
 }
 
-footer .footer-last .icon-box.icon-inline {
+footer .icon-box.icon-inline {
     line-height: 13px;
 }
 
@@ -92,18 +71,15 @@ footer .footer-last .icon-box.icon-inline {
     padding-right: 9px;
 }
 
-.col-lg-6 {
-    padding: 36px 36px 36px 36px;
-}
-
-.site-info,
-.social-icon {
-    font-size: 1.1rem;
-}
-
-@media (min-width: 960px) {
-    .col-lg-6 {
-        width: 50%;
+@media (max-width: 575px) {
+    footer .site-info {
+        font-size: .875em;
+    }
+    footer .icon-box.icon-inline a {
+        font-size: 1em;
+    }
+    footer .icon-box.icon-inline a {
+        padding: 4px;
     }
 }
 </style>
