@@ -72,4 +72,9 @@ footer {
 a.router-link-exact-active {
   color: #42b983;
 }
+@media (max-width: 767px) {
+  div#app {
+    height: auto;
+  }
+}
 </style>
