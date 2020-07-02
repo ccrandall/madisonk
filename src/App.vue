@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header v-bind:socialLinks="socialLinks"></Header>
-    <b-container>
-      <router-view></router-view>
-    </b-container>
+    <router-view></router-view>
     <Footer v-bind:socialLinks="socialLinks"></Footer>
   </div>
 </template>
