@@ -35,4 +35,18 @@ ul li span {
     padding-right: 1rem;
     font-size: .85rem;
 }
+@media (max-width: 767px) {
+  .text-sm-center {
+    text-align: center !important;
+  }
+}
+@media (max-width: 575px) {
+    ul li span {
+        display: none;
+    }
+    ul.list-unstyled.d-flex.justify-content-center li {
+        font-size: .85rem;
+        padding-right: 8px;
+    }
+}
 </style>

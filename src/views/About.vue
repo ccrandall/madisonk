@@ -51,10 +51,4 @@ export default {
   background: radial-gradient(black, transparent);
   background: rgba(0,0,0,.5);
 }
-
-@media (max-width: 767px) {
-  .text-sm-center {
-    text-align: center !important;
-  }
-}
 </style>

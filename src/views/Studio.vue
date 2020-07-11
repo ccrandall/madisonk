@@ -9,8 +9,8 @@
           </b-col>
         </b-row>
         <b-row>
-            <b-col>
-                <ul class="list-unstyled">
+            <b-col sm>
+                <ul class="list-unstyled text-center">
                     <li><strong>Software:</strong></li>
                     <li>Cubase Pro 10</li>
                     <li>Logic Pro</li>
@@ -21,8 +21,8 @@
                     <li>Ableton</li>
                 </ul>
             </b-col>
-            <b-col>
-                <ul class="list-unstyled">
+            <b-col sm>
+                <ul class="list-unstyled text-center">
                 <li><strong>Hardware:</strong></li>
                 <li>Apple Macintosh</li>
                 <li>Yamaha MOXF8</li>
@@ -31,8 +31,8 @@
                 <li>M-Audio AIR 192 - 6 Interface</li>
                 </ul>
             </b-col>
-            <b-col>
-                <ul class="list-unstyled">
+            <b-col sm>
+                <ul class="list-unstyled text-center">
                 <li><strong>Mics:</strong></li>
                 <li>Neuman TLM 103</li>
                 <li>Sennheiser E865</li>
@@ -63,9 +63,6 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
 <style scoped>
 .studio {
   font-family: 'Playfair Display';
@@ -76,6 +73,8 @@ export default {
   background-color: #000;
   background-color: rgba(0,0,0,.65);
   color: #FFF;
+}
+.studio .col-sm {
   font-size: 1.3rem;
 }
 .studio:before {
@@ -87,11 +86,5 @@ export default {
   left: 0;
   background: radial-gradient(black, transparent);
   background: rgba(0,0,0,.5);
-}
-
-@media (max-width: 767px) {
-  .text-sm-center {
-    text-align: center !important;
-  }
 }
 </style>
