@@ -57,7 +57,7 @@ body {
 div#app {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
   border: 10px solid #000;
 }
 header + div {

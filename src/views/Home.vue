@@ -5,6 +5,7 @@
     </div>
     <div class="home_container fadeIn">
       <PhotoGrid></PhotoGrid>
+      <PageHeading></PageHeading>
       <b-container class="content p-5">
         <b-row>
           <b-col>
@@ -19,10 +20,12 @@
 
 <script>
 import PhotoGrid from '../components/PhotoGrid';
+import PageHeading from '../components/layout/PageHeading';
 export default {
   name: 'Home',
   components: {
-    PhotoGrid
+    PhotoGrid,
+    PageHeading
   },
   data: function() {
     return {

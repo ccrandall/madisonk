@@ -11,7 +11,8 @@
                 <div id="logo-container-mobile" class="logo-container">
                     <div id="main-logo" class="navbar-header style-light">
                         <a href="#" class="navbar-brand" data-minheight="14">
-                            <img :src="'./images/MadSoundzMusic_LOGO_BLACK.png'" alt="">
+                            <img :src="logoImage" alt="Mad Soundz Music Logo" class="desktop-logo">
+                            <img :src="mobileLogoImage" alt="Mad Soundz Music Logo" class="mobile-logo">
                         </a>
                     </div>
                 </div>
@@ -31,6 +32,7 @@
                     <b-nav vertical>
                     <router-link to="/">Home</router-link>
                     <router-link to="/about">About</router-link>
+                    <router-link to="/studio">Studio</router-link>
                     <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>
@@ -42,12 +44,17 @@
 </template>
 
 <script>
+import mobileLogoImage from '@/assets/images/mobile-logo.png';
+import logoImage from '@/assets/images/MadSoundzMusic_LOGO_purple.png';
+
 export default {
     name: "Header",
     props: ["socialLinks"],
     data: function() {
         return {
-            isClosed: false
+            isClosed: false,
+            logoImage: logoImage,
+            mobileLogoImage: mobileLogoImage
         }
     },
     methods: {
@@ -192,9 +199,18 @@ div#logo-container-mobile {
     padding: 1rem;
 }
 
+.navbar-brand img.mobile-logo {
+    display: none;
+}
+
 @media (max-width: 767px) {
-    .navbar-brand img {
+    .navbar-brand img.desktop-logo {
         display: none;
+    }
+    .navbar-brand img.mobile-logo {
+        display: block;
+        width: auto;
+        max-height: 60px;
     }
 }
 
