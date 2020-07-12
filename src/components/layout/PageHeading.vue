@@ -30,6 +30,10 @@ h3:after {
     margin: 10px auto;
 }
 
+.home h3:after {
+    background: #000;
+}
+
 ul li span {
     padding-left: 1rem;
     padding-right: 1rem;
