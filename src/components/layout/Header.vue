@@ -16,7 +16,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="nav navbar-nav social-icons-container">
+                <div class="nav navbar-nav social-icons-container hide-mobile">
                     <ul class="menu-smart sm menu-icons menu-smart-social">
                         <li v-bind:key="link.id" v-for="link in socialLinks" class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
                     </ul>
@@ -36,6 +36,9 @@
                     <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>
+                    <ul class="menu-smart sm menu-icons menu-smart-social">
+                        <li v-bind:key="link.id" v-for="link in socialLinks" class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
+                    </ul>
                 </div>
             </template>
             </b-sidebar>
@@ -107,11 +110,11 @@ div#logo-container-mobile {
     display: inline;
 }
 
- .menu-primary .menu-smart .social-icon {
+.menu-smart .social-icon {
     display: inline-block;
     padding: 10px;
- }
-.menu-primary .menu-smart .social-icon a {
+}
+.menu-smart .social-icon a {
     color: #000;
 }
 
@@ -203,6 +206,11 @@ div#logo-container-mobile {
     display: none;
 }
 
+.b-sidebar-outer .menu-icons {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
 @media (max-width: 767px) {
     .navbar-brand img.desktop-logo {
         display: none;
@@ -211,6 +219,9 @@ div#logo-container-mobile {
         display: block;
         width: auto;
         max-height: 60px;
+    }
+    .hide-mobile {
+        display: none;
     }
 }
 
