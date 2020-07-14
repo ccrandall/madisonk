@@ -33,6 +33,7 @@
                     <router-link to="/">Home</router-link>
                     <router-link to="/about">About</router-link>
                     <router-link to="/studio">Studio</router-link>
+                    <router-link to="/works">Works</router-link>
                     <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>
