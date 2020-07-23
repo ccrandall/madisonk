@@ -7,15 +7,20 @@
             <h1 class="text-center mt-4 mb-4">Works</h1>
           </b-col>
         </b-row>
-        <b-row>
-            <b-col sm>
+        <b-row class="mb-5">
+            <b-col>
+                <div>
+                    <b-card-group deck>
+                        <b-card bg-variant="dark" :header="work.title" text-variant="white" class="text-center" v-bind:key="work.id" v-for="work in works">
+                            <b-card-text v-html="work.summary"></b-card-text>
+                            <audio controls preload>
+                                <source :src="work.audioFile" type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                        </b-card>
+                    </b-card-group>
+                </div>
             </b-col>
-            <!-- <b-col sm>
-                
-            </b-col>
-            <b-col sm>
-                
-            </b-col> -->
         </b-row>
 
     </b-container>
@@ -25,13 +30,34 @@
 <script>
 import PageHeading from '../components/layout/PageHeading';
 import bgImage from '@/assets/images/site-bg.jpg';
+
 export default {
   components: {
     PageHeading
   },
   data: function() {
     return {
-      bgImage: bgImage
+        works: [
+            {
+                id: 1,
+                title: 'Work Title',
+                summary: 'Card text, summary',
+                audioFile: require('@/assets/media/final-heartbreak.mp3')
+            },
+            {
+                id: 2,
+                title: 'Work Title 2',
+                summary: 'Card text, summary',
+                audioFile: require('@/assets/media/final-heartbreak.mp3')
+            },
+            {
+                id: 3,
+                title: 'Work Title 3',
+                summary: 'Card text, summary',
+                audioFile: require('@/assets/media/final-heartbreak.mp3')
+            }
+        ],
+        bgImage: bgImage
     };
   }
 }
