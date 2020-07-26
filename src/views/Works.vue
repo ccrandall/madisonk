@@ -8,12 +8,12 @@
           </b-col>
         </b-row>
         <b-row class="mb-5">
-            <b-col>
+            <b-col md="6" v-bind:key="work.id" v-for="work in works">
                 <div>
                     <b-card-group deck>
-                        <b-card bg-variant="dark" :header="work.title" text-variant="white" class="text-center" v-bind:key="work.id" v-for="work in works">
+                        <b-card bg-variant="primary" :header="work.title" text-variant="white" class="text-center mb-4">
                             <b-card-text v-html="work.summary"></b-card-text>
-                            <audio controls preload>
+                            <audio controls preload controlsList="nodownload">
                                 <source :src="work.audioFile" type="audio/mp3">
                             Your browser does not support the audio element.
                             </audio>
@@ -64,6 +64,10 @@ export default {
 </script>
 
 <style scoped>
+.bg-primary {
+    background-color: #a61d49;
+    background: linear-gradient(-180deg, rgba(166,29,73,1) 0%, rgba(246,152,182,1) 100%)
+}
 .works {
   font-family: 'Playfair Display';
   background-size: cover;
