@@ -11,7 +11,7 @@
             <b-col md="6" v-bind:key="work.id" v-for="work in works">
                 <div>
                     <b-card-group deck>
-                        <b-card bg-variant="primary" :header="work.title" text-variant="white" class="text-center mb-4">
+                        <b-card :header="work.title" border-variant="light" class="text-center mb-4">
                             <b-card-text v-html="work.summary"></b-card-text>
                             <audio controls preload controlsList="nodownload">
                                 <source :src="work.audioFile" type="audio/mp3">
@@ -90,5 +90,23 @@ export default {
   left: 0;
   background: radial-gradient(black, transparent);
   background: rgba(0,0,0,.5);
+}
+.works .card {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.works .card .card-header {
+    font-size: 1.5em;
+}
+
+.works .card .card-header:after {
+    content: '';
+    background: #FFF;
+    width: 14%;
+    height: 2px;
+    display: block;
+    margin: 10px auto;
 }
 </style>
