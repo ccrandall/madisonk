@@ -9,8 +9,6 @@
       <b-container class="content p-5">
         <b-row>
           <b-col>
-            <h1>Heading goes here</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptas, dignissimos facilis accusamus beatae neque harum asperiores tempora sit obcaecati unde quos odio molestias enim. Quasi distinctio libero quisquam eaque Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptas, dignissimos facilis accusamus beatae neque harum asperiores tempora sit obcaecati unde quos odio molestias enim. Quasi distinctio libero quisquam eaque</p>
           </b-col>
         </b-row>
       </b-container>
