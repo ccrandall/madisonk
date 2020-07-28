@@ -76,15 +76,16 @@ div#masthead {
 .menu-container {
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.menu-container > div {}
+.menu-container > div {
+    width: 33.3333%;
+}
 
 div#logo-container-mobile {
-    justify-content: center;
+    text-align: center;
 }
 
 .row-menu {
@@ -103,7 +104,7 @@ div#logo-container-mobile {
 }
 
 .social-icons-container {
-    justify-content: flex-end;
+    text-align: right;
 }
 
 .menu-icons {
@@ -213,6 +214,12 @@ div#logo-container-mobile {
     width: 100%;
 }
 @media (max-width: 767px) {
+    .menu-container {
+        justify-content: space-between;
+    }
+    .menu-container > div {
+        width: auto;
+    }
     .navbar-brand img.desktop-logo {
         display: none;
     }
