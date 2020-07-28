@@ -4,8 +4,42 @@
     <b-container>
         <b-row class="mb-5">
           <b-col>
-            <h1 class="text-center mt-4 mb-4">This is a contact page</h1>
-            <p>Contact information here</p>
+            <h1 class="text-center mt-4 mb-4">Contact</h1>
+            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+              <b-form-group
+                id="input-group-1"
+                label="Email:"
+                label-for="input-1"
+                description=""
+              >
+                <b-form-input
+                  id="input-1"
+                  v-model="form.email"
+                  type="email"
+                  required
+                  placeholder="Enter email"
+                ></b-form-input>
+              </b-form-group>
+              <b-form-group id="input-group-2" label="Name:" label-for="input-2">
+                <b-form-input
+                  id="input-2"
+                  v-model="form.name"
+                  required
+                  placeholder="Enter name"
+                ></b-form-input>
+              </b-form-group>
+              <b-form-group id="input-group-3" label="Message:" label-for="input-3">
+                <b-form-textarea
+                  id="textarea"
+                  v-model="text"
+                  placeholder="Enter message..."
+                  rows="3"
+                  max-rows="6"
+                ></b-form-textarea>
+              </b-form-group>
+
+              <b-button type="submit" variant="dark">Submit</b-button>
+            </b-form>
           </b-col>
         </b-row>
     </b-container>
@@ -21,15 +55,24 @@ export default {
   },
   data: function() {
     return {
-      bgImage: bgImage
-    };
-  }
+      bgImage: bgImage,
+      form: {
+          email: '',
+          name: '',
+          message: ''
+      },
+      show: true
+    }
+  },
+  methods: {
+      onSubmit(evt) {
+        evt.preventDefault()
+        alert(JSON.stringify(this.form))
+      }
+    }
 }
 </script>
 
-<style>
-
-</style>
 <style scoped>
 .contact {
   font-family: 'Playfair Display';
