@@ -82,16 +82,11 @@ export default {
 }
 
 #photo-grid .col {
-    min-height: 400px;
+    min-height: 300px;
 }
 
 #photo-grid .col:hover .overlay-wrap {
     background: rgba(255,255,255,.65);
-}
-
-#photo-grid .col:hover .overlay-text a,
-#photo-grid .col:hover .overlay-wrap a {
-    color: #000;
 }
 
 #photo-grid .col:hover .overlay-text {
@@ -146,6 +141,20 @@ export default {
 
 .t-entry {
     width: 100%;
+}
+
+.t-entry h2 {
+    position: relative;
+}
+
+.t-entry:before {
+    position: absolute;
+    content: '';
+    background: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .background-cover {
