@@ -83,7 +83,6 @@ export default {
   background-color: #000;
   background-color: rgba(0,0,0,.65);
   color: #FFF;
-  font-size: 1.3rem;
 }
 .contact:before {
   content: '';
