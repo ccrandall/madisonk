@@ -13,10 +13,13 @@
                     <b-card-group deck>
                         <b-card :header="work.title" border-variant="light" class="text-center mb-4">
                             <b-card-text v-html="work.summary"></b-card-text>
-                            <audio controls preload controlsList="nodownload">
+                            <audio controls preload controlsList="nodownload" v-if="work.audioFile">
                                 <source :src="work.audioFile" type="audio/mp3">
                             Your browser does not support the audio element.
                             </audio>
+                            <div v-if="work.pdfFile">
+                                <a :href="work.pdfFile">Download PDF</a>
+                            </div>
                         </b-card>
                     </b-card-group>
                 </div>
@@ -40,22 +43,40 @@ export default {
         works: [
             {
                 id: 1,
-                title: 'Work Title',
-                summary: 'Card text, summary',
+                title: 'Final Heartbreak',
+                summary: 'Violin 1, Violin 2, Viola, and Cello',
                 audioFile: require('@/assets/media/final-heartbreak.mp3')
             },
             {
                 id: 2,
-                title: 'Work Title 2',
-                summary: 'Card text, summary',
-                audioFile: require('@/assets/media/final-heartbreak.mp3')
+                title: 'Eerie Movements of the Night',
+                summary: 'Piano and two Cello\'s + MIDI effects',
+                audioFile: require('@/assets/media/eerie-movements-of-the-night.mp3')
             },
             {
                 id: 3,
-                title: 'Work Title 3',
-                summary: 'Card text, summary',
+                title: 'Wherever You Are',
+                summary: 'Piano Solo',
+                pdfFile: '@/assets/media/wherever-you-are-full-piano-score.pdf'
+            },
+            {
+                id: 4,
+                title: 'Prelude to an Angel',
+                summary: 'Standard Orchestral instrumentation',
+                audioFile: require('@/assets/media/Prelude-for-an-Angel2edit.mp3')
+            },
+            {
+                id: 5,
+                title: 'From Twilight Till Dawn',
+                summary: 'Standard Orchestral instrumentation ',
+                audioFile: require('@/assets/media/FromTwilightTillDawn.mp3')
+            },
+            {
+                id: 6,
+                title: 'Farewell',
+                summary: 'Trumpet, French Horn, Trombone, and Tuba',
                 audioFile: require('@/assets/media/final-heartbreak.mp3')
-            }
+            },
         ],
         bgImage: bgImage
     };
@@ -95,6 +116,10 @@ export default {
     border: none;
     border-radius: 0;
     background: transparent;
+}
+
+.works .card a {
+    color: #FFF;
 }
 
 .works .card .card-header {

@@ -95,4 +95,12 @@ export default {
   background: radial-gradient(black, transparent);
   background: rgba(0,0,0,.5);
 }
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact form button[type='submit'] {
+  display: block;
+  width: 100%;
+}
 </style>
