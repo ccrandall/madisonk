@@ -1,18 +1,20 @@
 <template>
   <div id="photo-grid">
       <b-container fluid>
-          <b-row no-gutters cols-sm="2" cols="1" cols-md="4" cols-lg="4">
+          <b-row no-gutters cols-sm="2" cols="1" cols-md="5" cols-lg="5">
             <b-col v-for="(image, index) in images" :style="styles" v-bind:key="index" v-on:clickExcess="triggerClick">
                 <div class="overlay-wrap">
-                    <div class="overlay-inner">
-                        <div class="overlay-content">
-                            <div class="overlay-text double-block-padding">
-                                <div class="t-entry">
-                                    <h2 class="t-entry-title font-202503 h2 font-weight-700 fontspace-111509">{{image.text}}</h2>
+                    <router-link :to="image.link">
+                        <div class="overlay-inner">
+                            <div class="overlay-content">
+                                <div class="overlay-text double-block-padding">
+                                    <div class="t-entry">
+                                        <h2 class="t-entry-title font-202503 h2 font-weight-700 fontspace-111509">{{image.text}}</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
                 <div class="background-cover" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
             </b-col>
@@ -35,27 +37,33 @@ export default {
                 {
                     id: 1,
                     img_name: '/images/unsplash.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    text: 'About',
+                    link: '/about'
                 },
                 {
                     id: 2,
                     img_name: '/images/unsplash2.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    text: 'Works',
+                    link: '/works'
                 },
                 {
                     id: 3,
                     img_name: '/images/unsplash3.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    text: 'Studio',
+                    link: '/studio'
                 },
                 {
                     id: 4,
                     img_name: '/images/unsplash4.jpg',
-                    text: 'Link Text',
-                    link: '#'
-                }
+                    text: 'Gallery',
+                    link: '/gallery'
+                },
+                {
+                    id: 5,
+                    img_name: '/images/unsplash.jpg',
+                    text: 'Contact',
+                    link: '/contact'
+                },
             ]
         }
     },
@@ -81,6 +89,11 @@ export default {
     background: rgba(255,255,255,.65);
 }
 
+#photo-grid .col:hover .overlay-text a,
+#photo-grid .col:hover .overlay-wrap a {
+    color: #000;
+}
+
 #photo-grid .col:hover .overlay-text {
     transform: translate(0px, 0%);
     transition-delay: 250ms;
@@ -98,6 +111,10 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 2;
+}
+
+.overlay-wrap a {
+    color: #fff;
 }
 
 .overlay-inner {
@@ -120,7 +137,7 @@ export default {
     width: 100%;
     margin: 0 auto;
     transition: opacity 0.2s ease-in-out,transform 0.2s ease-in-out;
-    opacity: 0;
+    /* opacity: 0; */
     transform: scale(0.9);
 }
 .double-block-padding {
