@@ -7,7 +7,8 @@
             <li>Composer <span>&#9671;</span></li>
             <li>Pianist <span>&#9671;</span></li>
             <li>Arranger <span>&#9671;</span></li>
-            <li>Songwriter</li>
+            <li>Songwriter <span>&#9671;</span></li>
+            <li>Collaborative Musician</li>
           </ul>
         </b-col>
       </b-row>
@@ -42,6 +43,9 @@ ul li span {
 @media (max-width: 767px) {
   .text-sm-center {
     text-align: center !important;
+  }
+  ul.d-flex {
+      flex-wrap: wrap;
   }
 }
 @media (max-width: 575px) {
