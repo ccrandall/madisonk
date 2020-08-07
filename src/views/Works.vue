@@ -57,7 +57,7 @@ export default {
                 id: 3,
                 title: 'Wherever You Are',
                 summary: 'Piano Solo',
-                pdfFile: '@/assets/media/wherever-you-are-full-piano-score.pdf'
+                pdfFile: '/pdf/wherever-you-are-full-piano-score.pdf'
             },
             {
                 id: 4,
