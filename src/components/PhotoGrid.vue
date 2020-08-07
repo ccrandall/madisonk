@@ -16,7 +16,7 @@
                         </div>
                     </router-link>
                 </div>
-                <div class="background-cover" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
+                <div class="background-cover" :id="'img-' + index" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
             </b-col>
           </b-row>
       </b-container>
@@ -36,7 +36,7 @@ export default {
             images: [
                 {
                     id: 1,
-                    img_name: '/images/unsplash.jpg',
+                    img_name: '/images/madison_piano.jpg',
                     text: 'About',
                     link: '/about'
                 },
@@ -171,6 +171,10 @@ export default {
     transition-property: transform,filter, opacity;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+}
+
+div#img-0 {
+    background-position: left center;
 }
 
 </style>
