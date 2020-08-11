@@ -50,7 +50,7 @@
 
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/site-bg.jpg';
+import bgImage from '@/assets/images/studio2.jpg';
 export default {
   components: {
     PageHeading
@@ -84,7 +84,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: radial-gradient(black, transparent);
-  background: rgba(0,0,0,.5);
+  /* background: radial-gradient(black, transparent);
+  background: rgba(0,0,0,.5); */
 }
 </style>

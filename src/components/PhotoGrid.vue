@@ -48,7 +48,7 @@ export default {
                 },
                 {
                     id: 3,
-                    img_name: '/images/unsplash3.jpg',
+                    img_name: '/images/studio2.jpg',
                     text: 'Studio',
                     link: '/studio'
                 },

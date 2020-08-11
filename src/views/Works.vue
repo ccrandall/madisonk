@@ -50,7 +50,7 @@ export default {
             {
                 id: 2,
                 title: 'Eerie Movements of the Night',
-                summary: 'Piano and two Cello\'s + MIDI effects',
+                summary: 'Piano + 2 Cellos',
                 audioFile: require('@/assets/media/eerie-movements-of-the-night.mp3')
             },
             {
