@@ -1,20 +1,22 @@
 <template>
   <div id="photo-grid">
       <b-container fluid>
-          <b-row no-gutters cols-sm="2" cols="1" cols-md="4" cols-lg="4">
+          <b-row no-gutters cols-sm="2" cols="1" cols-md="5" cols-lg="5">
             <b-col v-for="(image, index) in images" :style="styles" v-bind:key="index" v-on:clickExcess="triggerClick">
                 <div class="overlay-wrap">
-                    <div class="overlay-inner">
-                        <div class="overlay-content">
-                            <div class="overlay-text double-block-padding">
-                                <div class="t-entry">
-                                    <h2 class="t-entry-title font-202503 h2 font-weight-700 fontspace-111509">{{image.text}}</h2>
+                    <router-link :to="image.link">
+                        <div class="overlay-inner">
+                            <div class="overlay-content">
+                                <div class="overlay-text double-block-padding">
+                                    <div class="t-entry">
+                                        <h2 class="t-entry-title font-202503 h2 font-weight-700 fontspace-111509">{{image.text}}</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
-                <div class="background-cover" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
+                <div class="background-cover" :id="'img-' + index" v-bind:style="{ backgroundImage: 'url(' + image.img_name + ')'}"></div>
             </b-col>
           </b-row>
       </b-container>
@@ -34,28 +36,34 @@ export default {
             images: [
                 {
                     id: 1,
-                    img_name: '/images/unsplash.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    img_name: '/images/madison_piano.jpg',
+                    text: 'About',
+                    link: '/about'
                 },
                 {
                     id: 2,
                     img_name: '/images/unsplash2.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    text: 'Works',
+                    link: '/works'
                 },
                 {
                     id: 3,
-                    img_name: '/images/unsplash3.jpg',
-                    text: 'Link Text',
-                    link: '#'
+                    img_name: '/images/studio2.jpg',
+                    text: 'Studio',
+                    link: '/studio'
                 },
                 {
                     id: 4,
                     img_name: '/images/unsplash4.jpg',
-                    text: 'Link Text',
-                    link: '#'
-                }
+                    text: 'Gallery',
+                    link: '/gallery'
+                },
+                {
+                    id: 5,
+                    img_name: '/images/unsplash.jpg',
+                    text: 'Contact',
+                    link: '/contact'
+                },
             ]
         }
     },
@@ -74,7 +82,7 @@ export default {
 }
 
 #photo-grid .col {
-    min-height: 400px;
+    min-height: 300px;
 }
 
 #photo-grid .col:hover .overlay-wrap {
@@ -100,6 +108,10 @@ export default {
     z-index: 2;
 }
 
+.overlay-wrap a {
+    color: #fff;
+}
+
 .overlay-inner {
     display: table;
     table-layout: fixed;
@@ -120,7 +132,7 @@ export default {
     width: 100%;
     margin: 0 auto;
     transition: opacity 0.2s ease-in-out,transform 0.2s ease-in-out;
-    opacity: 0;
+    /* opacity: 0; */
     transform: scale(0.9);
 }
 .double-block-padding {
@@ -129,6 +141,20 @@ export default {
 
 .t-entry {
     width: 100%;
+}
+
+.t-entry h2 {
+    position: relative;
+}
+
+.t-entry:before {
+    position: absolute;
+    content: '';
+    background: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .background-cover {
@@ -145,6 +171,10 @@ export default {
     transition-property: transform,filter, opacity;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1);
+}
+
+div#img-0 {
+    background-position: left center;
 }
 
 </style>

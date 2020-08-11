@@ -11,11 +11,12 @@
                 <div id="logo-container-mobile" class="logo-container">
                     <div id="main-logo" class="navbar-header style-light">
                         <a href="#" class="navbar-brand" data-minheight="14">
-                            <img :src="'./images/MadSoundzMusic_LOGO_BLACK.png'" alt="">
+                            <img :src="logoImage" alt="Mad Soundz Music Logo" class="desktop-logo">
+                            <img :src="mobileLogoImage" alt="Mad Soundz Music Logo" class="mobile-logo">
                         </a>
                     </div>
                 </div>
-                <div class="nav navbar-nav social-icons-container">
+                <div class="nav navbar-nav social-icons-container hide-mobile">
                     <ul class="menu-smart sm menu-icons menu-smart-social">
                         <li v-bind:key="link.id" v-for="link in socialLinks" class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
                     </ul>
@@ -31,9 +32,14 @@
                     <b-nav vertical>
                     <router-link to="/">Home</router-link>
                     <router-link to="/about">About</router-link>
+                    <router-link to="/studio">Studio</router-link>
+                    <router-link to="/works">Works</router-link>
                     <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>
+                    <ul class="menu-smart sm menu-icons menu-smart-social">
+                        <li v-bind:key="link.id" v-for="link in socialLinks" class="menu-item-link social-icon tablet-hidden mobile-hidden"><a :href="link.href" class="social-menu-link" target="_blank"><font-awesome-icon :icon="[link.fontAwesomeClass, link.name]"></font-awesome-icon></a></li>
+                    </ul>
                 </div>
             </template>
             </b-sidebar>
@@ -42,12 +48,17 @@
 </template>
 
 <script>
+import mobileLogoImage from '@/assets/images/mobile-logo.png';
+import logoImage from '@/assets/images/MadSoundzMusic_LOGO_purple.png';
+
 export default {
     name: "Header",
     props: ["socialLinks"],
     data: function() {
         return {
-            isClosed: false
+            isClosed: false,
+            logoImage: logoImage,
+            mobileLogoImage: mobileLogoImage
         }
     },
     methods: {
@@ -65,15 +76,16 @@ div#masthead {
 .menu-container {
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.menu-container > div {}
+.menu-container > div {
+    width: 33.3333%;
+}
 
 div#logo-container-mobile {
-    justify-content: center;
+    text-align: center;
 }
 
 .row-menu {
@@ -92,7 +104,7 @@ div#logo-container-mobile {
 }
 
 .social-icons-container {
-    justify-content: flex-end;
+    text-align: right;
 }
 
 .menu-icons {
@@ -100,11 +112,11 @@ div#logo-container-mobile {
     display: inline;
 }
 
- .menu-primary .menu-smart .social-icon {
+.menu-smart .social-icon {
     display: inline-block;
     padding: 10px;
- }
-.menu-primary .menu-smart .social-icon a {
+}
+.menu-smart .social-icon a {
     color: #000;
 }
 
@@ -192,8 +204,31 @@ div#logo-container-mobile {
     padding: 1rem;
 }
 
+.navbar-brand img.mobile-logo {
+    display: none;
+}
+
+.b-sidebar-outer .menu-icons {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
 @media (max-width: 767px) {
-    .navbar-brand img {
+    .menu-container {
+        justify-content: space-between;
+    }
+    .menu-container > div {
+        width: auto;
+    }
+    .navbar-brand img.desktop-logo {
+        display: none;
+    }
+    .navbar-brand img.mobile-logo {
+        display: block;
+        width: auto;
+        max-height: 60px;
+    }
+    .hide-mobile {
         display: none;
     }
 }
