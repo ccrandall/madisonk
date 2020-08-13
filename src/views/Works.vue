@@ -42,10 +42,9 @@ export default {
     return {
         works: [
             {
-                id: 1,
-                title: 'Final Heartbreak',
-                summary: 'Violin 1, Violin 2, Viola, and Cello',
-                audioFile: require('@/assets/media/final-heartbreak.mp3')
+                id: 3,
+                title: 'Wherever You Are',
+                summary: 'Piano Solo'
             },
             {
                 id: 2,
@@ -54,16 +53,16 @@ export default {
                 audioFile: require('@/assets/media/eerie-movements-of-the-night.mp3')
             },
             {
-                id: 3,
-                title: 'Wherever You Are',
-                summary: 'Piano Solo',
-                pdfFile: '/pdf/wherever-you-are-full-piano-score.pdf'
-            },
-            {
                 id: 4,
                 title: 'Prelude to an Angel',
                 summary: 'Standard Orchestral instrumentation',
                 audioFile: require('@/assets/media/Prelude-for-an-Angel2edit.mp3')
+            },
+            {
+                id: 1,
+                title: 'Final Heartbreak',
+                summary: 'Violin 1, Violin 2, Viola, and Cello',
+                audioFile: require('@/assets/media/final-heartbreak.mp3')
             },
             {
                 id: 5,
