@@ -3,7 +3,10 @@
     <PageHeading></PageHeading>
     <b-container>
       <b-row class="justify-content-center">
-        <b-col offset-md="5" md="7" class="about_content">
+        <b-col md="5" class="text-center">
+          <img :src="madImage" alt="Madison's Headshot" class="img-thumbnail">
+        </b-col>
+        <b-col md="7" class="about_content">
           <p>Madison Kaminsky is a graduate of Sonoma State University where she earned a Bachelor of Music in Piano Performance and a Bachelor of Arts in composition.</p>
           <p>Born &amp; raised in Los Angeles, Madison honed her skills by participating in as many musical opportunities as possible: piano lessons, musical theater, film camp, and more. In middle school she competed in Knott's Berry Farm's "Music in the Parks" competition where she won the award for Best Accompanist. In high school she was the pianist for numerous musicals, several that earned Jerry Herman Award orchestral nominations with ceremonies at the famed Pantages Theater in Hollywood.  The Pantages would continue to be a source of influence when it offered Madison the chance to sit in the pit and observe the orchestra during a performance of The Phantom of the Opera. An opportunity to participate in a Disneyland behind-the-scenes animation film score session solidified her dream to one day score tv and films.</p>
           <p>Madison graduated from Oak Park High School where she was awarded the Woody Herman Jazz Award her Senior year. She was also awarded the P & M Thompson Music Scholarship from Sonoma State University where she was actively involved with numerous orchestras, scored student films, and twice-performed in the annual “Sonoma Musica Viva” series. She was fortunate to study under Marilyn Thompson and attend Master Classes with renowned musicians and composers including Matt Browne and Chris Harris - experiences that continue to shape and influence her pursuits.</p>
@@ -14,7 +17,8 @@
 </template>
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/about_madison.jpg';
+import bgImage from '@/assets/images/site-bg.jpg';
+import madImage from '@/assets/images/about_madison.jpg';
 
 export default {
   components: {
@@ -22,7 +26,8 @@ export default {
   },
   data: function() {
     return {
-      bgImage: bgImage
+      bgImage: bgImage,
+      madImage: madImage
     };
   }
 }
@@ -53,9 +58,9 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .about_content {
-    font-size: 1em;
-    margin-top: 225px;
+  img.img-thumbnail {
+    max-width: 300px;
+    margin-bottom: 20px;
   }
 }
 </style>
