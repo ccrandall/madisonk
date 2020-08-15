@@ -1,5 +1,5 @@
 <template>
-  <div class="studio" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">
+  <div class="studio" :style="{ backgroundImage: 'linear-gradient(50deg, black, transparent), url(\'' + bgImage + '\')'}">
     <PageHeading></PageHeading>
     <b-container>
         <b-row class="mb-5">
@@ -66,12 +66,11 @@ export default {
 <style scoped>
 .studio {
   font-family: 'Playfair Display';
-  background-size: cover;
+  background-size: 65%;
   position: relative;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: right top;
   background-color: #000;
-  background-color: rgba(0,0,0,.65);
   color: #FFF;
 }
 .studio .col-sm {
