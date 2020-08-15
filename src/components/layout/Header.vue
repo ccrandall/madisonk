@@ -34,6 +34,7 @@
                     <router-link to="/about">About</router-link>
                     <router-link to="/studio">Studio</router-link>
                     <router-link to="/works">Works</router-link>
+                    <router-link to="/gallery">Gallery</router-link>
                     <router-link to="/contact">Contact</router-link>
                     </b-nav>
                 </nav>

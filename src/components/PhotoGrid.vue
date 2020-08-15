@@ -54,7 +54,7 @@ export default {
                 },
                 {
                     id: 4,
-                    img_name: '/images/unsplash4.jpg',
+                    img_name: '/images/madison_gallery.jpg',
                     text: 'Gallery',
                     link: '/gallery'
                 },
@@ -175,6 +175,10 @@ export default {
 
 div#img-0 {
     background-position: left center;
+}
+
+div#img-3 {
+    background-position: top center;
 }
 
 </style>
