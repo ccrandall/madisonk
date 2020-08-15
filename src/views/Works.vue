@@ -44,7 +44,8 @@ export default {
             {
                 id: 3,
                 title: 'Wherever You Are',
-                summary: 'Piano Solo'
+                summary: 'Piano Solo',
+                audioFile: require('@/assets/media/wherever-you-are.mp3')
             },
             {
                 id: 2,
@@ -74,7 +75,7 @@ export default {
                 id: 6,
                 title: 'Farewell',
                 summary: 'Trumpet, French Horn, Trombone, and Tuba',
-                audioFile: require('@/assets/media/final-heartbreak.mp3')
+                audioFile: require('@/assets/media/farewell.mp3')
             },
         ],
         bgImage: bgImage

@@ -50,7 +50,7 @@
 
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/studio2.jpg';
+import bgImage from '@/assets/images/studio2-small.jpg';
 export default {
   components: {
     PageHeading

@@ -52,7 +52,7 @@
 
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/site-bg.jpg';
+import bgImage from '@/assets/images/contact-bg.jpg';
 export default {
   components: {
     PageHeading
