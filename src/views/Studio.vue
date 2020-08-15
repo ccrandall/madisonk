@@ -86,4 +86,10 @@ export default {
   /* background: radial-gradient(black, transparent);
   background: rgba(0,0,0,.5); */
 }
+@media (max-width: 767px) {
+  .studio {
+    background-size: cover;
+    background-position: top center;
+  }
+}
 </style>
