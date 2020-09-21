@@ -42,6 +42,17 @@ export default {
     return {
         works: [
             {
+                id: 7,
+                title: 'WHO AM I',
+                summary: 'Film Score Demo',
+                audioFile: require('@/assets/media/who-am-I.mp3')
+            },{
+                id: 8,
+                title: 'Prelude No. 1 in B Minor',
+                summary: 'Piano Solo',
+                audioFile: require('@/assets/media/Prelude-No-1-in-B-Minor.mp3')
+            },
+            {
                 id: 3,
                 title: 'Wherever You Are',
                 summary: 'Piano Solo',
