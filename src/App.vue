@@ -29,7 +29,7 @@ export default {
           id: 2,
           name: 'instagram',
           fontAwesomeClass: 'fab',
-          href: '#ig'
+          href: 'https://www.instagram.com/mads_kam_'
         },
         {
           id: 3,
