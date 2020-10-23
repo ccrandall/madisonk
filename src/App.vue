@@ -20,12 +20,6 @@ export default {
     return {
       socialLinks: [
         {
-          id: 1,
-          name: 'twitter',
-          fontAwesomeClass: 'fab',
-          href: '#twitter'
-        },
-        {
           id: 2,
           name: 'instagram',
           fontAwesomeClass: 'fab',
@@ -35,7 +29,13 @@ export default {
           id: 3,
           name: 'youtube',
           fontAwesomeClass: 'fab',
-          href: '#youtube'
+          href: 'https://www.youtube.com/channel/UCw-kFI2X7Gjb2L2QeTqtfaQ'
+        },
+        {
+          id:1,
+          name: 'linkedin-in',
+          fontAwesomeClass: 'fab',
+          href: "https://linkedin.com/in/madison-kaminsky-ab35aa1b3"
         }
       ]
     }
