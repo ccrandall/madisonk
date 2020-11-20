@@ -42,11 +42,18 @@ export default {
     return {
         works: [
             {
+                id: 9,
+                title: 'Montage',
+                summary: 'Film Score',
+                audioFile: require('@/assets/media/MONTAGE.mp3')
+            },
+            {
                 id: 7,
                 title: 'WHO AM I',
                 summary: 'Film Score Demo',
                 audioFile: require('@/assets/media/who-am-I.mp3')
-            },{
+            },
+            {
                 id: 8,
                 title: 'Prelude No. 1 in B Minor',
                 summary: 'Piano Solo',
