@@ -42,6 +42,12 @@ export default {
     return {
         works: [
             {
+                id: 10,
+                title: 'Covert',
+                summary: 'Piano Solo',
+                audioFile: require('@/assets/media/COVERT.mp3')
+            },
+            {
                 id: 9,
                 title: 'Montage',
                 summary: 'Film Score',
