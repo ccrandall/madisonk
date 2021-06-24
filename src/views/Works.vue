@@ -42,6 +42,12 @@ export default {
     return {
         works: [
             {
+                id: 11,
+                title: 'Waterfall',
+                summary: 'Piano Solo',
+                audioFile: require('@/assets/media/Waterfall.mp3')
+            },
+            {
                 id: 10,
                 title: 'Covert',
                 summary: 'Piano Solo',
