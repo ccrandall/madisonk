@@ -18,7 +18,8 @@
 <script>
 import PageHeading from '../components/layout/PageHeading';
 import bgImage from '@/assets/images/site-bg.jpg';
-import madImage from '@/assets/images/about_madison.jpg';
+//import madImage from '@/assets/images/about_madison.jpg';
+import madImage from '@/assets/images/madison-bio.jpg';
 
 export default {
   components: {
