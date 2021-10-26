@@ -42,6 +42,12 @@ export default {
     return {
         works: [
             {
+                id: 12,
+                title: 'Grounding',
+                summary: 'String Quintet',
+                audioFile: require('@/assets/media/Grounding.mp3')
+            },
+            {
                 id: 11,
                 title: 'Waterfall',
                 summary: 'Piano Solo',
