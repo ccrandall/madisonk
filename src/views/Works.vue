@@ -1,5 +1,6 @@
 <template>
-  <div class="works" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">
+  <!-- <div class="works" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}"> -->
+  <div class="works">
     <PageHeading></PageHeading>
     <b-container>
         <b-row class="mb-5">
@@ -32,7 +33,7 @@
 
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/site-bg.jpg';
+//import bgImage from '@/assets/images/site-bg.jpg';
 
 export default {
   components: {
@@ -114,7 +115,7 @@ export default {
                 audioFile: require('@/assets/media/farewell.mp3')
             },
         ],
-        bgImage: bgImage
+        //bgImage: bgImage
     };
   }
 }

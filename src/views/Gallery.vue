@@ -1,5 +1,6 @@
 <template>
-  <div class="gallery" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">
+  <!-- <div class="gallery" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}"> -->
+  <div class="gallery">
     <PageHeading></PageHeading>
     <b-container>
       <b-row class="justify-content-center">
@@ -12,7 +13,7 @@
 </template>
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/site-bg.jpg';
+//import bgImage from '@/assets/images/site-bg.jpg';
 
 export default {
   components: {
@@ -20,7 +21,7 @@ export default {
   },
   data: function() {
     return {
-      bgImage: bgImage
+      //bgImage: bgImage
     };
   }
 }
