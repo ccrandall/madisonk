@@ -1,5 +1,6 @@
 <template>
-  <div class="about" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">
+  <!-- <div class="about" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}"> -->
+  <div class="about">
     <PageHeading></PageHeading>
     <b-container>
       <b-row class="justify-content-center">
@@ -17,7 +18,7 @@
 </template>
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/site-bg.jpg';
+//import bgImage from '@/assets/images/site-bg.jpg';
 //import madImage from '@/assets/images/about_madison.jpg';
 import madImage from '@/assets/images/madison-bio.jpg';
 
@@ -27,7 +28,7 @@ export default {
   },
   data: function() {
     return {
-      bgImage: bgImage,
+      //bgImage: bgImage,
       madImage: madImage
     };
   }
