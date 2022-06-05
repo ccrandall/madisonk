@@ -1,5 +1,6 @@
 <template>
-  <div class="contact" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">
+  <!--<div class="contact" :style="{ backgroundImage: 'url(\'' + bgImage + '\')'}">-->
+  <div class="contact">
     <PageHeading></PageHeading>
     <b-container>
         <b-row class="mb-5">
@@ -52,14 +53,14 @@
 
 <script>
 import PageHeading from '../components/layout/PageHeading';
-import bgImage from '@/assets/images/contact-bg.jpg';
+//import bgImage from '@/assets/images/contact-bg.jpg';
 export default {
   components: {
     PageHeading
   },
   data: function() {
     return {
-      bgImage: bgImage,
+      //bgImage: bgImage,
       form: {
           email: '',
           name: '',
