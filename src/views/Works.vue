@@ -98,9 +98,9 @@ export default {
             },
             {
                 id: 1,
-                title: 'Final Heartbreak',
+                title: 'Final Heartbreak (live)',
                 summary: 'Violin 1, Violin 2, Viola, and Cello',
-                audioFile: require('@/assets/media/final-heartbreak.mp3')
+                audioFile: require('@/assets/media/final-heartbreak-live.mp3')
             },
             {
                 id: 5,
