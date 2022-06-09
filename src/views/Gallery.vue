@@ -107,16 +107,18 @@ export default {
   min-height: 300px;
 }
 
-.gallery .col-md-12 {display: flex;flex-wrap: wrap;}
-
-.gallery .col-md-12 > div {flex: 0 1 33%;}
-
 .gallery .img_wrap div {
   margin: 20px;
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center
+}
+
+@media (min-width: 992px) {
+  .gallery .col-md-12 {display: flex;flex-wrap: wrap;}
+
+  .gallery .col-md-12 > div {flex: 0 1 33%;}
 }
 
 </style>
