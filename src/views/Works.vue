@@ -43,6 +43,12 @@ export default {
     return {
         works: [
             {
+                id: 13,
+                title: 'Crowning of the Queen',
+                summary: 'Studio/Chamber Orchestra',
+                audioFile: require('@/assets/media/crowning-of-the-queen.mp3')
+            },
+            {
                 id: 12,
                 title: 'Grounding',
                 summary: 'String Quintet',
