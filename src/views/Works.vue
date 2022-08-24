@@ -43,10 +43,16 @@ export default {
     return {
         works: [
             {
-                id: 13,
-                title: 'Crowning of the Queen',
-                summary: 'Studio/Chamber Orchestra',
-                audioFile: require('@/assets/media/crowning-of-the-queen.mp3')
+                id: 2,
+                title: 'Eerie Movements of the Night',
+                summary: 'Piano + 2 Cellos',
+                audioFile: require('@/assets/media/eerie-movements-of-the-night.mp3')
+            },
+            {
+                id: 1,
+                title: 'Final Heartbreak (live)',
+                summary: 'Violin 1, Violin 2, Viola, and Cello',
+                audioFile: require('@/assets/media/final-heartbreak-live.mp3')
             },
             {
                 id: 12,
@@ -91,22 +97,10 @@ export default {
                 audioFile: require('@/assets/media/wherever-you-are.mp3')
             },
             {
-                id: 2,
-                title: 'Eerie Movements of the Night',
-                summary: 'Piano + 2 Cellos',
-                audioFile: require('@/assets/media/eerie-movements-of-the-night.mp3')
-            },
-            {
                 id: 4,
                 title: 'Prelude to an Angel',
                 summary: 'Standard Orchestral instrumentation',
                 audioFile: require('@/assets/media/Prelude-for-an-Angel2edit.mp3')
-            },
-            {
-                id: 1,
-                title: 'Final Heartbreak (live)',
-                summary: 'Violin 1, Violin 2, Viola, and Cello',
-                audioFile: require('@/assets/media/final-heartbreak-live.mp3')
             },
             {
                 id: 5,
